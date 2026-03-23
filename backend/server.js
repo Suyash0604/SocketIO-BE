@@ -10,10 +10,9 @@ const chatHistory = [];
 
 const httpServer = createServer(app);
 const io = new Server(httpServer, {
-  cors:{
-    origin:"http://localhost:5173"
-  }
-  
+  cors: {
+    origin: "https://socket-io-9fvv09zmn-suyash0604s-projects.vercel.app",
+  },
 });
 
 io.on("connection", (socket) => {
