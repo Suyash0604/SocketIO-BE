@@ -22,7 +22,7 @@ function App() {
   }, [messages])
 
   useEffect(() => {
-    const newSocket = io('http://localhost:3000')
+    const newSocket = io('https://socketio-be-njqi.onrender.com')
     setSocket(newSocket)
 
     newSocket.on('response', (data) => {
@@ -57,7 +57,7 @@ function App() {
   }
 
   return (
-    <div className={`app ${isDarkMode ? 'dark' : 'light'}`}>
+    <div className={`app ${isDarkMode ? 'dark' : ''}`}>
       {/* Header */}
       <header className="header">
         <div className="header-content">
